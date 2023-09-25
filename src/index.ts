@@ -1,13 +1,13 @@
 
-import express, { Express, Request, Response , Application } from 'express';
+import express, { Request, Response  } from 'express';
 import dotenv from 'dotenv';
-import mongoose from 'mongoose';
 
 //For env File 
 dotenv.config();
+const port = undefined;
 
-const app: Application = express();
-const db = mongoose.connect("mongodb+srv://elf:elf123@cluster0.lz40bun.mongodb.net/");
+const app = express();
+// const db = mongoose.connect("mongodb+srv://elf:elf123@cluster0.lz40bun.mongodb.net/");
 
 app.get('/', (req: Request, res: Response) => {
   res.send('Welcome to Express & TypeScript Server');
